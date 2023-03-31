@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Used -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BOOTSTRAP 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Frontend Mentor | IP Address Tracker</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="p-5">
+    <h2 class="text-center text-white">IP Address Tracker</h2>
+    <div class="text-center position-relative">
+      <label for="Search">
+        <div class="input-group m-4">
+          <input
+            type="text"
+            class="form-control"
+            id="search-input"
+            placeholder="Search for any IP address or domain"
+            aria-describedby="button-addon2"
+          />
+          <button
+            class="btn btn-outline-secondary bg-black text-white"
+            type="button"
+            id="show-ip-btn"
+          >
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+      </label>
+    </div>
+
+    <div class="container">
+      <div class="ip-infos d-flex justify-content-between bg-white">
+        <div>
+          <p>IP ADDRESS</p>
+          <span id="ip-address"></span>
+        </div>
+        <div>
+          <p>LOCATION</p>
+          <span id="location"></span>
+        </div>
+        <div>
+          <p>TIMEZONE</p>
+          <span id="timezone"></span>
+        </div>
+        <div>
+          <p>ISP</p>
+          <span id="isp"></span>
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >.API: <a href="https://www.openstreetmap.org/">OpenStreetMap</a> Coded by
+      <a href="https://github.com/piksl1">piksl1</a>.
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
